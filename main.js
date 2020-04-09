@@ -4,17 +4,14 @@ class Vehicle {
     this.wheelCount = wheelCount
     this.maxSpeed = spd
     this.speed = 0
+  
   }
   accelerate(){
-    if (this.name === 'Ferrari'){
-      this.speed + this.maxSpeed/2 > this.maxSpeed ? 
+    const rate = this.name === 'Ferrari'? 2 : 3
+
+      this.speed + this.maxSpeed/rate > this.maxSpeed ? 
       this.speed = this.maxSpeed :
-      this.speed += this.maxSpeed/2
-    }else{
-    this.speed + this.maxSpeed/3 > this.maxSpeed ? 
-    this.speed = this.maxSpeed :
-    this.speed += this.maxSpeed/3
-    }
+      this.speed += this.maxSpeed/rate
   }
 }
 
